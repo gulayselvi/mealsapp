@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mealsapp/data/datas.dart';
+import 'package:mealsapp/screens/meal_list.dart';
+
 
 
 
@@ -23,30 +26,31 @@ class _MyDrawerState extends State<MyDrawer> {
               ),
             child: Text("Kategoriler"),
             ),
+            
             ListTile(
               title: const Text("Başlangıçlar"),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (ctx)=> const MealList(meals: meals)));
               },
             ),
-            ListTile(
+             ListTile(
               title: const Text("Ara Sıcaklar"),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (ctx)=> const MealList(meals: meals)));
               },
             ),
             ListTile(
               title: const Text("Ana Yemekler"),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (ctx)=> const MealList(meals: meals)));
               },
             ),
             ListTile(
               title: const Text("Tatlılar"),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (ctx)=> const MealList(meals: meals)));
               },
-            ),
+            )
             ],)
     );
   }
